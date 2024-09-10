@@ -1,0 +1,15 @@
+services:
+  frontend:
+    image: xxxxxxx.dkr.ecr.eu-central-1.amazonaws.com/simple-app:frontend
+    deploy:
+      replicas: 1
+    ports:
+      - '80:80'
+    environment:
+      - BACKEND_SERVICE_URL=http://backend:8080
+    depends_on:
+      - backend
+  backend:
+    image: xxxxxxx.dkr.ecr.eu-central-1.amazonaws.com/simple-app:backend
+    deploy:
+      replicas: 3
