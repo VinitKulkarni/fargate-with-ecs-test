@@ -9,6 +9,11 @@ backend_url = os.getenv('BACKEND_SERVICE_URL')
 
 @app.route('/')
 def index():
+    return "hi"
+
+
+@app.route('/api')
+def index():
     response = requests.get(f"{backend_url}/data")
     return f"It is {hostname}.\n{response.text}"
 
