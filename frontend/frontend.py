@@ -8,7 +8,7 @@ hostname = socket.gethostname()
 backend_url = os.getenv('BACKEND_SERVICE_URL')
 
 @app.route('/')
-def index():
+def message():
     return "hi"
 
 
