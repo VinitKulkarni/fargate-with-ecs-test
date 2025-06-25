@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 hostname = socket.gethostname()
-backend_url = "http://backend:8080"
+backend_url = "http://127.0.0.1:8080"
 
 @app.route('/')
 def message():
