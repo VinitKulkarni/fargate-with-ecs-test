@@ -9,7 +9,7 @@ backend_url = os.getenv('BACKEND_SERVICE_URL')
 
 @app.route('/')
 def message():
-    return "hi"
+    return "hiii"
 
 
 @app.route('/api')
